@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Calculator app</title>
+  </head>
+  <body>
+    <div class="calculator">
+      <div class="header">
+        <h1 class="theme-dark">calc</h1>
+        <div class="theme-block">
+          <h3 class="theme-dark">theme</h3>
+          <div>
+            <div class="theme-number">
+              <p class="theme-dark">1</p>
+              <p class="theme-dark">2</p>
+              <p class="theme-dark">3</p>
+            </div>
+            <div class="theme-toggle">
+              <input
+                checked
+                type="radio"
+                name="toggle"
+                value="-1"
+                checked
+                onclick="themeMode1()"
+              />
+              <label class="toggle toggle-yes"></label>
+              <input
+                type="radio"
+                name="toggle"
+                value="true"
+                onclick="themeMode2()"
+              />
+              <label class="toggle toggle-yes"></label>
+              <input
+                type="radio"
+                name="toggle"
+                value="false"
+                onclick="themeMode3()"
+              />
+              <label class="toggle toggle-yes"></label>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen">
+        <p class="screen-operation"></p>
+        <p class="screen-text theme-dark">0</p>
+      </div>
+      <div class="buttons-container">
+        <div class="buttons number" onclick="insertNumber(event)">7</div>
+        <div class="buttons number" onclick="insertNumber(event)">8</div>
+        <div class="buttons number" onclick="insertNumber(event)">9</div>
+        <div class="buttons" id="del" onclick="del()">DEL</div>
+        <div class="buttons number" onclick="insertNumber(event)">4</div>
+        <div class="buttons number" onclick="insertNumber(event)">5</div>
+        <div class="buttons number" onclick="insertNumber(event)">6</div>
+        <div class="buttons" onclick="plus()">+</div>
+        <div class="buttons number" onclick="insertNumber(event)">1</div>
+        <div class="buttons number" onclick="insertNumber(event)">2</div>
+        <div class="buttons number" onclick="insertNumber(event)">3</div>
+        <div class="buttons" onclick="minus()">-</div>
+        <div class="buttons" onclick="decimalNumber()">.</div>
+        <div class="buttons number" onclick="insertNumber(event)">0</div>
+        <div class="buttons" onclick="obelus()">/</div>
+        <div class="buttons" onclick="times()">x</div>
+        <div class="buttons" id="reset" onclick="reset()">RESET</div>
+        <div class="buttons" id="equals" onclick="equals()">=</div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">AdrianFRC</a>.
+    </div>
+  </body>
+  <script type="text/javascript" src="app.js"></script>
+</html>
