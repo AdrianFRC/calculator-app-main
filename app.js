@@ -8,6 +8,8 @@ const equalsButton = document.getElementById("equals");
 const delButton = document.getElementById("del");
 const screenNumber = document.querySelector(".screen-text");
 const screenOperation = document.querySelector(".screen-operation");
+const attLinks = document.querySelectorAll('.attribution-links');
+const attSpans = document.querySelectorAll('.attribution-span');
 let result;
 let firstArgument;
 let secondArgument;
@@ -40,6 +42,12 @@ function themeMode1() {
   delButton.style.boxShadow =
     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, hsl(224, 28%, 35%) 0px -5px 0px inset";
   screenOperation.style.color = "hsl(0, 0%, 100%)";
+  attLinks.forEach((element) => {
+    element.style.color = "hsl(6, 63%, 50%)";
+  });
+  attSpans.forEach((element) => {
+    element.style.color = "hsl(28, 16%, 65%)";
+  });
 }
 
 function themeMode2() {
@@ -69,6 +77,12 @@ function themeMode2() {
   delButton.style.boxShadow =
     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, hsl(185, 58%, 25%) 0px -5px 0px inset";
   screenOperation.style.color = "hsl(60, 10%, 19%)";
+  attLinks.forEach((element) => {
+    element.style.color = "hsl(6, 63%, 50%)";
+  });
+  attSpans.forEach((element) => {
+    element.style.color = "hsl(60, 10%, 19%)";
+  });
 }
 
 function themeMode3() {
@@ -98,6 +112,12 @@ function themeMode3() {
   delButton.style.boxShadow =
     "rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, hsl(285, 91%, 52%) 0px -5px 0px inset";
   screenOperation.style.color = "hsl(52, 100%, 62%)";
+  attLinks.forEach((element) => {
+    element.style.color = "hsl(176, 100%, 44%)";
+  });
+  attSpans.forEach((element) => {
+    element.style.color = "hsl(52, 100%, 62%)";
+  });
 }
 
 function insertNumber(event) {
